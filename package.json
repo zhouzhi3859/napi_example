@@ -1,0 +1,17 @@
+{
+  "name": "napi_example",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bindings": "^1.3.0"
+  }
+}
