@@ -9,4 +9,7 @@
  * @History
  */
 const Tclass = require('./class');
-console.log((new Tclass()).plusOne());
+const functions = require('./function');
+const nowTime = Date.now();
+const result = functions.sum(100000);
+console.log('结果为：' + result + '，耗时' + ((Date.now()) - nowTime) + 'ms');

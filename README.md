@@ -4,7 +4,7 @@ This is a repository of node napi examples.\
 If you want detail of napi, you can visit [node_napi].
 
 # Table of Contents
-
+* [function](./src/function.cc)
 * [Class](./src/class.cc)
 
 # Where napi_module used
