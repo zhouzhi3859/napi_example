@@ -3,6 +3,15 @@ pipeline {
     label 'linux'
   }
   stages {
+    stage('fetch') {
+        steps {
+          sh 'npm install'
+          git clone https://github.com/zhouzhi3859/napi_example.git
+          cd ./napi_example
+          git checkout -b dev
+          git pull origin dev:dev
+        }
+      }
     stage('build') {
       steps {
         sh 'npm install'
