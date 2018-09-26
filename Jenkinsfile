@@ -6,16 +6,16 @@ pipeline {
     stage('fetch') {
         steps {
           sh 'npm install'
-          git clone https://github.com/zhouzhi3859/napi_example.git
-          cd ./napi_example
-          git checkout -b dev
-          git pull origin dev:dev
+          git 'https://github.com/zhouzhi3859/napi_example.git'
+          sh 'cd ./napi_example'
+          sh 'git checkout -b dev'
+          sh 'git pull origin dev:dev'
         }
       }
     stage('build') {
       steps {
         sh 'npm install'
-        npm run build
+        sh 'npm run build'
       }
     }
   }
