@@ -10,6 +10,7 @@ pipeline {
           npm install
           npm run build
           echo "version = ${VERSION}"
+          echo "version = ${VERSION}"
         '''
       }
     }
