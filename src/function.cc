@@ -1,5 +1,4 @@
 #include <node_api.h>
-#include <vector>
 
 long fibonacci_a(int n);
 long fibonacci_b(int &n);
