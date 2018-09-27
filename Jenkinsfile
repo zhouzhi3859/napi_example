@@ -5,12 +5,12 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'npm install'
-        sh 'npm run build'
         sh '''
           export VERSION=`npm run packageVersion | awk 'END{print}'`
+          npm install
+          npm run build
+          echo "version = ${VERSION}"
         '''
-        sh 'echo "version = ${VERSION}"'
       }
     }
   }
