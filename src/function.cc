@@ -3,7 +3,6 @@
 
 long fibonacci_a(int n);
 long fibonacci_b(int &n);
-long fibonacci_c(int &n);
 
 static napi_value fib_a(napi_env env, napi_callback_info info) {
   size_t argc = 1;
@@ -90,11 +89,6 @@ long fibonacci_b(int &n) {
     a = feb_n_val;
   }
   return feb_n_val;
-}
-
-long fibonacci_c(int &n) {
-  // 准备列矩阵
-
 }
 
 NAPI_MODULE(NODE_GYP_MODULE_NAME, Init)

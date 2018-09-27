@@ -12,6 +12,6 @@ pipeline {
           echo "version = ${VERSION}"
         '''
       }
-    }
+      }
   }
 }
