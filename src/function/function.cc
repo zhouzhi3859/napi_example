@@ -6,15 +6,16 @@ long fibonacci_b(int &n);
 static napi_value fib_a(napi_env env, napi_callback_info info) {
   size_t argc = 1;
   napi_value args[1];
-  napi_get_cb_info(env, info, &argc, args, NULL, NULL);
+  napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);
 
   napi_valuetype valuetype0;
   napi_typeof(env, args[0], &valuetype0);
 
   if (!(valuetype0 == napi_number)) {
     napi_value errChar;
-    napi_throw_error(env, NULL, "assertion (Wrong argument type. Numbers expected.) failed");
-    napi_create_string_utf8(env, "Wrong argument type. Numbers expected.", sizeof("Wrong argument type. Numbers expected."), &errChar);
+    napi_throw_error(env, nullptr, "assertion (Wrong argument type. Numbers expected.) failed");
+    napi_create_string_utf8(env, "Wrong argument type. Numbers expected.",
+        sizeof("Wrong argument type. Numbers expected."), &errChar);
     return  errChar;
   }
 
@@ -33,7 +34,7 @@ static napi_value fib_a(napi_env env, napi_callback_info info) {
 static napi_value fib_b(napi_env env, napi_callback_info info) {
   size_t argc = 1;
   napi_value args[1];
-  napi_get_cb_info(env, info, &argc, args, NULL, NULL);
+  napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);
 
   napi_valuetype valuetype0;
   napi_typeof(env, args[0], &valuetype0);
