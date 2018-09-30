@@ -1,12 +1,16 @@
 {
   "targets": [
+     {
+       "target_name": "callback",
+       "sources": [ "./src/callback/callback.cc" ]
+     },
     {
       "target_name": "class",
-      "sources": [ "./src/class.cc" ]
+      "sources": [ "./src/class/class.cc" ]
     },
     {
       "target_name": "function",
-      "sources": [ "./src/function.cc" ]
+      "sources": [ "./src/function/function.cc" ]
     },
   ]
 }

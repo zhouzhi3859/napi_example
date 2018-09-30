@@ -1,22 +1,21 @@
 #include <node_api.h>
-#include <vector>
 
 long fibonacci_a(int n);
 long fibonacci_b(int &n);
-long fibonacci_c(int &n);
 
 static napi_value fib_a(napi_env env, napi_callback_info info) {
   size_t argc = 1;
   napi_value args[1];
-  napi_get_cb_info(env, info, &argc, args, NULL, NULL);
+  napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);
 
   napi_valuetype valuetype0;
   napi_typeof(env, args[0], &valuetype0);
 
   if (!(valuetype0 == napi_number)) {
     napi_value errChar;
-    napi_throw_error(env, NULL, "assertion (Wrong argument type. Numbers expected.) failed");
-    napi_create_string_utf8(env, "Wrong argument type. Numbers expected.", sizeof("Wrong argument type. Numbers expected."), &errChar);
+    napi_throw_error(env, nullptr, "assertion (Wrong argument type. Numbers expected.) failed");
+    napi_create_string_utf8(env, "Wrong argument type. Numbers expected.",
+        sizeof("Wrong argument type. Numbers expected."), &errChar);
     return  errChar;
   }
 
@@ -35,7 +34,7 @@ static napi_value fib_a(napi_env env, napi_callback_info info) {
 static napi_value fib_b(napi_env env, napi_callback_info info) {
   size_t argc = 1;
   napi_value args[1];
-  napi_get_cb_info(env, info, &argc, args, NULL, NULL);
+  napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);
 
   napi_valuetype valuetype0;
   napi_typeof(env, args[0], &valuetype0);
@@ -90,11 +89,6 @@ long fibonacci_b(int &n) {
     a = feb_n_val;
   }
   return feb_n_val;
-}
-
-long fibonacci_c(int &n) {
-  // 准备列矩阵
-
 }
 
 NAPI_MODULE(NODE_GYP_MODULE_NAME, Init)

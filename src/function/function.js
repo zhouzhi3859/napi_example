@@ -9,5 +9,5 @@
  * @History
  */
 
-const Tclass = require('./build/Release/class.node').MyObject;
-module.exports = Tclass;
+const funtions = require('bindings')('function.node');
+module.exports = funtions;
