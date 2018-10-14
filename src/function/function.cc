@@ -1,9 +1,6 @@
-#include <node_api.h>
+#include "./function.h"
 
-long fibonacci_a(int n);
-long fibonacci_b(int &n);
-
-static napi_value fib_a(napi_env env, napi_callback_info info) {
+napi_value function::fib_a(napi_env env, napi_callback_info info) {
   size_t argc = 1;
   napi_value args[1];
   napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);
@@ -15,7 +12,7 @@ static napi_value fib_a(napi_env env, napi_callback_info info) {
     napi_value errChar;
     napi_throw_error(env, nullptr, "assertion (Wrong argument type. Numbers expected.) failed");
     napi_create_string_utf8(env, "Wrong argument type. Numbers expected.",
-        sizeof("Wrong argument type. Numbers expected."), &errChar);
+                            sizeof("Wrong argument type. Numbers expected."), &errChar);
     return  errChar;
   }
 
@@ -31,7 +28,7 @@ static napi_value fib_a(napi_env env, napi_callback_info info) {
   return result;
 }
 
-static napi_value fib_b(napi_env env, napi_callback_info info) {
+napi_value function::fib_b(napi_env env, napi_callback_info info) {
   size_t argc = 1;
   napi_value args[1];
   napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);
@@ -58,16 +55,6 @@ static napi_value fib_b(napi_env env, napi_callback_info info) {
   return result;
 }
 
-static napi_value Init(napi_env env, napi_value exports) {
-  napi_property_descriptor desc[2] = {
-    { "fib_a", 0, fib_a, 0, 0, 0, napi_default, 0 },
-    { "fib_b", 0, fib_b, 0, 0, 0, napi_default, 0 },
-  };
-  napi_define_properties(env, exports, 2, desc);
-  return exports;
-}
-
-
 long fibonacci_a(int n) {
   if (n < 2) {
     return n;
@@ -90,5 +77,3 @@ long fibonacci_b(int &n) {
   }
   return feb_n_val;
 }
-
-NAPI_MODULE(NODE_GYP_MODULE_NAME, Init)

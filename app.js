@@ -8,14 +8,17 @@
  * @FunctionList
  * @History
  */
-const Tclass = require('./src/class/class');
-const CallBack = require('./src/callback/callback');
-CallBack.runCallBack(function (msg) {
+
+const binding = require('./src');
+const obj = new binding.MyObject(9);
+console.log(binding.fib_a(40),);
+console.log(obj.plusOne());
+binding.runCallBack(function (msg) {
   console.log(msg);
 });
 
 function testRecv(desiredRecv) {
-  CallBack.runCallBackWithRecv(function() {
+  binding.runCallBackWithRecv(function() {
     console.log(this, desiredRecv);
   }, desiredRecv);
 }

@@ -8,7 +8,7 @@ class MyObject {
   static void Init(napi_env env, napi_value exports);
   static void Destructor(napi_env env, void* nativeObject, void* finalize_hint);
 
- private:
+public:
   explicit MyObject(double value_ = 0);
   ~MyObject();
 
