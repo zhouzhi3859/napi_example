@@ -1,7 +1,7 @@
 //
 // Created by zhouz on 2018/8/1.
 //
-#include "class.h"
+#include "./class.h"
 
 napi_ref MyObject::constructor;
 
@@ -147,10 +147,3 @@ napi_value MyObject::Multiply(napi_env env, napi_callback_info info) {
 
     return instance;
 }
-
-napi_value Init(napi_env env, napi_value exports) {
-    MyObject::Init(env, exports);
-    return exports;
-}
-
-NAPI_MODULE(NODE_GYP_MODULE_NAME, Init);

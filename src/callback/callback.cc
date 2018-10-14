@@ -1,7 +1,8 @@
-#include <node_api.h>
-//#include <string.h>
 
-static napi_value RunCallBack(napi_env env, napi_callback_info info) {
+//#include <string.h>
+#include "./callback.h"
+//using namespace callback;
+napi_value callback::RunCallBack(napi_env env, napi_callback_info info) {
   size_t argc = 2;
   napi_value args[2];
 //  napi_get_cb_info(env, info, &argc, &args[0], nullptr, nullptr);
@@ -46,7 +47,7 @@ static napi_value RunCallBack(napi_env env, napi_callback_info info) {
   return nullptr;
 }
 
-static napi_value RunCallBackWithRecv(napi_env env, napi_callback_info info) {
+napi_value callback::RunCallBackWithRecv(napi_env env, napi_callback_info info) {
   size_t argc = 3;
   napi_value args[3];
   napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);
@@ -90,13 +91,3 @@ static napi_value RunCallBackWithRecv(napi_env env, napi_callback_info info) {
   return nullptr;
 }
 
-static napi_value Init(napi_env env, napi_value exports) {
-  napi_property_descriptor desc[2] = {
-    { "runCallBack", 0, RunCallBack, nullptr, nullptr, nullptr, napi_default, nullptr },
-    { "runCallBackWithRecv", 0, RunCallBackWithRecv, nullptr, nullptr, nullptr, napi_default, nullptr },
-  };
-  napi_define_properties(env, exports, 2, desc);
-  return exports;
-}
-
-NAPI_MODULE(NODE_GYP_MODULE_NAME, Init)

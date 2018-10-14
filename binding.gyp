@@ -1,17 +1,9 @@
 {
   "targets": [
      {
-       "target_name": "callback",
-       "sources": [ "./src/callback/callback.cc" ]
+       "target_name": "<(module_name)",
+       "sources": [ "./src/callback/callback.cc", "./src/function/function.cc", "./src/class/class.cc", "./src/napi_example.cc" ]
      },
-    {
-      "target_name": "class",
-      "sources": [ "./src/class/class.cc" ]
-    },
-    {
-      "target_name": "function",
-      "sources": [ "./src/function/function.cc" ]
-    },
     {
       "target_name": "action_after_build",
       "type": "none",
