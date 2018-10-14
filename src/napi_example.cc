@@ -4,7 +4,6 @@
 #include "./class/class.h"
 #include "./callback/callback.h"
 #include "./function/function.h"
-//using namespace function;
 napi_value Init(napi_env env, napi_value exports) {
   napi_property_descriptor properties[] = {
       { "value", nullptr, nullptr, MyObject::GetValue, MyObject::SetValue, 0, napi_default, 0 },

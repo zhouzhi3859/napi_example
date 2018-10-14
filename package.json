@@ -9,7 +9,7 @@
     "packageVersion": "echo $npm_package_version",
     "dev": "node app.js",
     "package": "node-pre-gyp package",
-    "install": "echo installed",
+    "install": "node-pre-gyp install --fallback-to-build",
     "publish": "node-pre-gyp-github publish"
   },
   "keywords": [],
