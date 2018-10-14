@@ -4,15 +4,33 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "node-gyp rebuild",
+    "build": "node-pre-gyp rebuild",
     "test": "echo \"Error: no test specified\" && exit 1",
     "packageVersion": "echo $npm_package_version",
-    "dev": "node app.js"
+    "dev": "node app.js",
+    "package": "node-pre-gyp package",
+    "publish": "node-pre-gyp-github publish"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "node-pre-gyp": "^0.11.0",
     "bindings": "^1.3.0"
+  },
+  "devDependencies": {
+    "node-pre-gyp-github": "^1.4.2"
+  },
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/zhouzhi3859/napi_example.git"
+  },
+  "binary": {
+    "module_name" : "function",
+    "module_path": "./binding/Release/napi-v{napi_build_version}",
+    "package_name": "napi-v{napi_build_version}-{platform}-{arch}.tar.gz",
+    "host": "https://api.github.com/zhouzhi3859/napi_example/releases/download/",
+    "remote_path": "v{version}",
+    "napi_versions": [1, 3]
   }
 }
