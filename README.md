@@ -5,6 +5,7 @@ If you want detail of napi, you can visit [node_napi].
 
 # Table of Contents
 * [function](src/function/function.cc)
+* [callback](src/function/callback.cc)
 * [Class](src/class/class.cc)
 
 # Where napi_module used

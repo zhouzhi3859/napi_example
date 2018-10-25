@@ -11,16 +11,16 @@
 
 const binding = require('./src');
 const obj = new binding.MyObject(9);
-console.log(binding.fib_a(40),);
+console.log(binding.fib_a(40));
 console.log(obj.plusOne());
-binding.runCallBack(function (msg) {
+binding.runCallBack(function(msg) {
   console.log(msg);
 });
 
-function testRecv(desiredRecv) {
+const testRecv = function(desiredRecv) {
   binding.runCallBackWithRecv(function() {
     console.log(this, desiredRecv);
   }, desiredRecv);
-}
+};
 
 testRecv('Hello1');
