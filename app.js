@@ -24,3 +24,18 @@ const testRecv = function(desiredRecv) {
 };
 
 testRecv('Hello1');
+const a1 = 2731723712n;
+const b1 = 2731723712n;
+console.log(a1 * b1);
+
+const a2 = 2731723712;
+const b2 = 2731723712;
+console.log(a2 * b2);
+
+const a3 = 0.01;
+const b3 = 0.09;
+console.log(a3 + b3);
+
+let res = binding.add(0.01, 0.09);
+
+console.log(Number(res));

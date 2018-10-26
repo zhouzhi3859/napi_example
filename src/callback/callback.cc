@@ -13,9 +13,9 @@ napi_value callback::RunCallBack(napi_env env, napi_callback_info info) {
 
   if (valuetype0 != napi_function) {
     napi_value errChar1;
-    napi_throw_error(env, nullptr, "Wrong type of arguments. Expects a function as first argument.");
-    napi_create_string_utf8(env, "Wrong arguments. Expects a function as first argument.",
-                            sizeof("Wrong arguments. Expects a function as first argument."), &errChar1);
+    napi_throw_error(env, nullptr, "Wrong type of arguments. Expects a function_wrap as first argument.");
+    napi_create_string_utf8(env, "Wrong arguments. Expects a function_wrap as first argument.",
+                            sizeof("Wrong arguments. Expects a function_wrap as first argument."), &errChar1);
     return  errChar1;
   }
 
@@ -57,9 +57,9 @@ napi_value callback::RunCallBackWithRecv(napi_env env, napi_callback_info info) 
 
   if (valuetype0 != napi_function) {
     napi_value errChar1;
-    napi_throw_error(env, nullptr, "Wrong type of arguments. Expects a function as first argument.");
-    napi_create_string_utf8(env, "Wrong arguments. Expects a function as first argument.",
-                            sizeof("Wrong arguments. Expects a function as first argument."), &errChar1);
+    napi_throw_error(env, nullptr, "Wrong type of arguments. Expects a function_wrap as first argument.");
+    napi_create_string_utf8(env, "Wrong arguments. Expects a function_wrap as first argument.",
+                            sizeof("Wrong arguments. Expects a function_wrap as first argument."), &errChar1);
     return  errChar1;
   }
 

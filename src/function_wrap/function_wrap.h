@@ -13,5 +13,7 @@ namespace function {
   napi_value fib_a(napi_env env, napi_callback_info info);
 
   napi_value fib_b(napi_env env, napi_callback_info info);
+
+  napi_value add(napi_env env, napi_callback_info info);
 }
 #endif //NAPI_EXAMPLE_FUNCTION_H

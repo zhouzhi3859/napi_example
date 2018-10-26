@@ -48,9 +48,9 @@
     "no-extra-parens": 2,
     // 禁止不必要的分号
     "no-extra-semi": 2,
-    // 禁止对 function 声明重新赋值
+    // 禁止对 function_wrap 声明重新赋值
     "no-func-assign": 2,
-    // 禁止在嵌套的块中出现变量声明或 function 声明
+    // 禁止在嵌套的块中出现变量声明或 function_wrap 声明
     "no-inner-declarations": 2,
     // 禁止 RegExp 构造函数中存在无效的正则表达式字符串
     "no-invalid-regexp": 2,
@@ -151,7 +151,7 @@
     "no-labels": 2,
     // 禁止不必要的嵌套块
     "no-lone-blocks": 2,
-    // 禁止在循环中出现 function 声明和表达式
+    // 禁止在循环中出现 function_wrap 声明和表达式
     "no-loop-func": 2,
     // 禁止使用魔术数字 魔术数字是在代码中多次出现的没有明确含义的数字。它最好由命名常量取代
     "no-magic-numbers": 0,
@@ -169,7 +169,7 @@
     "no-octal": 2,
     // 禁止在字符串中使用八进制转义序列
     "no-octal-escape": 2,
-    // 禁止对 function 的参数进行重新赋值
+    // 禁止对 function_wrap 的参数进行重新赋值
     "no-param-reassign": 2,
     // 禁用 __proto__ 属性
     "no-proto": 1,
@@ -219,7 +219,7 @@
     "require-await": 2,
     // 要求所有的 var 声明出现在它们所在的作用域顶部
     "vars-on-top": 2,
-    // 需要把立即执行的函数包裹起来 强制总是包裹 function 表达式
+    // 需要把立即执行的函数包裹起来 强制总是包裹 function_wrap 表达式
     "wrap-iife": [2, "inside"],
     // 要求或者禁止Yoda条件 默认禁止
     "yoda": 2,
@@ -288,7 +288,7 @@
     "array-element-newline": [0, "never"],
     // 禁止或强制在单行代码块中使用空格 always：强制使用空格 never：禁止空格
     "block-spacing": [2, "always"],
-    // 大括号风格 if while function 后面的{必须与if在同一行，java风格
+    // 大括号风格 if while function_wrap 后面的{必须与if在同一行，java风格
     "brace-style": [2, "1tbs", { "allowSingleLine": false }],
     // 强制使用骆驼拼写法命名约定
     "camelcase": 0,
@@ -313,11 +313,11 @@
     "func-call-spacing": [2, "never"],
     // 要求函数名与其参数或属性相似
     "func-name-matching": 0,
-    // 要求或禁止使用命名的 function 表达式
+    // 要求或禁止使用命名的 function_wrap 表达式
     "func-names": [2, "never"],
     // 强制一致地使用函数声明或函数表达式，方法定义风格，参数：
-    // declaration: 强制使用方法声明的方式，function f(){} e.g [2, "declaration"]
-    // expression：强制使用方法表达式的方式，var f = function() {} e.g [2, "expression"]
+    // declaration: 强制使用方法声明的方式，function_wrap f(){} e.g [2, "declaration"]
+    // expression：强制使用方法表达式的方式，var f = function_wrap() {} e.g [2, "expression"]
     // allowArrowFunctions: declaration风格中允许箭头函数。 e.g [2, "declaration", { "allowArrowFunctions": true }]
     "func-style": [2, "expression", {"allowArrowFunctions": true}],
     // 禁止使用指定的标识符
