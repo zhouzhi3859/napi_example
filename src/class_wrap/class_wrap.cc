@@ -1,7 +1,7 @@
 //
 // Created by zhouz on 2018/8/1.
 //
-#include "./class.h"
+#include "./class_wrap.h"
 
 napi_ref MyObject::constructor;
 
@@ -66,7 +66,7 @@ napi_value MyObject::New(napi_env env, napi_callback_info info) {
         return _this;
     }
 
-    // Invoked as plain function `MyObject(...)`, turn into construct call.
+    // Invoked as plain function_wrap `MyObject(...)`, turn into construct call.
     argc = 1;
     napi_value argv[1] = {args[0]};
 
