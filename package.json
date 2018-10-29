@@ -34,7 +34,7 @@
     "host": "https://api.github.com/zhouzhi3859/napi_example/releases/download/",
     "remote_path": "v{version}",
     "napi_versions": [
-
+      1,
       3
     ]
   }
