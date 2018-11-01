@@ -2,7 +2,7 @@
 #include <utility>
 #include "./function_wrap.h"
 
-napi_value function::fib_a(napi_env env, napi_callback_info info) {
+napi_value function_wrap::fib_a(napi_env env, napi_callback_info info) {
   size_t argc = 1;
   napi_value args[1];
   napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);
@@ -14,7 +14,7 @@ napi_value function::fib_a(napi_env env, napi_callback_info info) {
     napi_value errChar;
     napi_throw_error(env, nullptr, "assertion (Wrong argument type. Numbers expected.) failed");
     napi_create_string_utf8(env, "Wrong argument type. Numbers expected.",
-                            sizeof("Wrong argument type. Numbers expected."), &errChar);
+      sizeof("Wrong argument type. Numbers expected."), &errChar);
     return  errChar;
   }
 
@@ -30,7 +30,7 @@ napi_value function::fib_a(napi_env env, napi_callback_info info) {
   return result;
 }
 
-napi_value function::fib_b(napi_env env, napi_callback_info info) {
+napi_value function_wrap::fib_b(napi_env env, napi_callback_info info) {
   size_t argc = 1;
   napi_value args[1];
   napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);
@@ -57,7 +57,7 @@ napi_value function::fib_b(napi_env env, napi_callback_info info) {
   return result;
 }
 
-napi_value function::add(napi_env env, napi_callback_info info) {
+napi_value function_wrap::add(napi_env env, napi_callback_info info) {
   size_t argc = 2;
   napi_value args[2];
   napi_get_cb_info(env, info, &argc, args, nullptr, nullptr);

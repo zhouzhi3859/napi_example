@@ -2,7 +2,13 @@
   "targets": [
      {
        "target_name": "<(module_name)",
-       "sources": [ "./src/callback/callback.cc", "./src/function_wrap/function_wrap.cc", "./src/class_wrap/class_wrap.cc", "./src/napi_example.cc" ]
+       "sources": [
+         "./src/callback/callback.cc",
+         "./src/function_wrap/function_wrap.cc",
+         "./src/object_wrap/object_wrap.cc",
+         "./src/object_factory/object_factory.cc",
+         "./src/napi_example.cc"
+       ]
      },
     {
       "target_name": "action_after_build",
