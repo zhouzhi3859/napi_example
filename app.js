@@ -10,11 +10,16 @@
  */
 
 const binding = require('./src');
-const obj = new binding.MyObject(9);
 console.log(binding.fib_a(40));
-console.log(obj.plusOne());
+
+const obj1 = new binding.MyObject(9);
+console.log(obj1.plusOne());
+
+const obj2 = binding.createObject('obj2');
+console.log('obj2.msg', obj2.msg);
+
 binding.runCallBack(function(msg) {
-  console.log(msg);
+  console.log('runCallBack', msg);
 });
 
 const testRecv = function(desiredRecv) {

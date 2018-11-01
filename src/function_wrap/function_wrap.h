@@ -8,7 +8,7 @@
 
 long fibonacci_a(int n);
 long fibonacci_b(int &n);
-namespace function {
+namespace function_wrap {
 
   napi_value fib_a(napi_env env, napi_callback_info info);
 
