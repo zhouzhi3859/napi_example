@@ -7,11 +7,11 @@ pipeline {
       steps {
         sh '''
           export VERSION=`npm run packageVersion | awk 'END{print}'`
-          echo "version = ${VERSION}"
           npm install
           npm run build
           npm run package
           npm run publish
+          echo "version = ${VERSION}"
         '''
       }
     }
