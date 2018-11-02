@@ -1,6 +1,6 @@
 
 //#include <string.h>
-#include "./callback.h"
+#include "callback.h"
 //using namespace callback;
 napi_value callback::RunCallBack(napi_env env, napi_callback_info info) {
   size_t argc = 2;
