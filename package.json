@@ -11,7 +11,7 @@
     "package": "node-pre-gyp package",
     "lint": "eslint .",
     "install": "node-pre-gyp install --fallback-to-build",
-    "publish": "node-pre-gyp-github publish"
+    "publish": "node-pre-gyp-github publish --release"
   },
   "keywords": [],
   "author": "",
