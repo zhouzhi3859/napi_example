@@ -2,7 +2,7 @@
 // Created by zhouz on 2018/11/1.
 //
 
-#include "./object_factory.h"
+#include "object_factory.h"
 
 napi_value object_factory::CreateObject(napi_env env, napi_callback_info info) {
   size_t argc = 2;

@@ -7,6 +7,7 @@
          "./src/function_wrap/function_wrap.cc",
          "./src/object_wrap/object_wrap.cc",
          "./src/object_factory/object_factory.cc",
+         "./src/passing_wrap/passing_wrap.cc",
          "./src/napi_example.cc"
        ]
      },

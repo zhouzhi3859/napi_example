@@ -12,10 +12,10 @@
 const binding = require('./src');
 console.log(binding.fib_a(40));
 
-const obj1 = new binding.MyObject(9);
+const obj1 = new binding.MyObject1(9);
 console.log(obj1.plusOne());
 
-const obj2 = binding.createObject('obj2');
+const obj2 = binding.createObject1('obj2');
 console.log('obj2.msg', obj2.msg);
 
 binding.runCallBack(function(msg) {

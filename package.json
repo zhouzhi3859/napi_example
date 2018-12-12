@@ -1,6 +1,6 @@
 {
   "name": "napi_example",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "",
   "main": "app.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "package": "node-pre-gyp package",
     "lint": "eslint .",
     "install": "node-pre-gyp install --fallback-to-build",
-    "publish": "node-pre-gyp-github publish"
+    "publish": "node-pre-gyp-github publish --release"
   },
   "keywords": [],
   "author": "",

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <utility>
-#include "./function_wrap.h"
+#include "function_wrap.h"
 
 napi_value function_wrap::fib_a(napi_env env, napi_callback_info info) {
   size_t argc = 1;
