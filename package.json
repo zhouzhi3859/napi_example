@@ -1,6 +1,6 @@
 {
   "name": "napi_example",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "",
   "main": "app.js",
   "scripts": {
@@ -36,6 +36,7 @@
     "remote_path": "v{version}",
     "napi_versions": [
       1,
+      2,
       3
     ]
   }
