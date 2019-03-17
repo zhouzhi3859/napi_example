@@ -1,6 +1,6 @@
 
 //#include <string.h>
-#include "./callback.h"
+#include "callback.h"
 //using namespace callback;
 napi_value callback::RunCallBack(napi_env env, napi_callback_info info) {
   size_t argc = 2;
@@ -13,9 +13,9 @@ napi_value callback::RunCallBack(napi_env env, napi_callback_info info) {
 
   if (valuetype0 != napi_function) {
     napi_value errChar1;
-    napi_throw_error(env, nullptr, "Wrong type of arguments. Expects a function as first argument.");
-    napi_create_string_utf8(env, "Wrong arguments. Expects a function as first argument.",
-                            sizeof("Wrong arguments. Expects a function as first argument."), &errChar1);
+    napi_throw_error(env, nullptr, "Wrong type of arguments. Expects a function_wrap as first argument.");
+    napi_create_string_utf8(env, "Wrong arguments. Expects a function_wrap as first argument.",
+      sizeof("Wrong arguments. Expects a function_wrap as first argument."), &errChar1);
     return  errChar1;
   }
 
@@ -24,8 +24,7 @@ napi_value callback::RunCallBack(napi_env env, napi_callback_info info) {
   if (valuetype1 != napi_undefined) {
     napi_value errChar2;
     napi_throw_error(env, nullptr, "Additional arguments should be undefined.");
-    napi_create_string_utf8(env, "Wrong arguments. Additional arguments should be undefined.",
-        sizeof("Wrong arguments. Additional arguments should be undefined."), &errChar2);
+    napi_create_string_utf8(env, "Wrong arguments. Additional arguments should be undefined.", sizeof("Wrong arguments. Additional arguments should be undefined."), &errChar2);
     return  errChar2;
   }
 
@@ -57,9 +56,9 @@ napi_value callback::RunCallBackWithRecv(napi_env env, napi_callback_info info) 
 
   if (valuetype0 != napi_function) {
     napi_value errChar1;
-    napi_throw_error(env, nullptr, "Wrong type of arguments. Expects a function as first argument.");
-    napi_create_string_utf8(env, "Wrong arguments. Expects a function as first argument.",
-                            sizeof("Wrong arguments. Expects a function as first argument."), &errChar1);
+    napi_throw_error(env, nullptr, "Wrong type of arguments. Expects a function_wrap as first argument.");
+    napi_create_string_utf8(env, "Wrong arguments. Expects a function_wrap as first argument.",
+      sizeof("Wrong arguments. Expects a function_wrap as first argument."), &errChar1);
     return  errChar1;
   }
 
@@ -70,7 +69,7 @@ napi_value callback::RunCallBackWithRecv(napi_env env, napi_callback_info info) 
     napi_value errChar2;
     napi_throw_error(env, nullptr, "Wrong type of arguments. Expects a string as second argument.");
     napi_create_string_utf8(env, "Wrong arguments. Expects a string as second argument.",
-                            sizeof("Wrong arguments. Expects a string as second argument."), &errChar2);
+      sizeof("Wrong arguments. Expects a string as second argument."), &errChar2);
     return  errChar2;
   }
 
@@ -80,7 +79,7 @@ napi_value callback::RunCallBackWithRecv(napi_env env, napi_callback_info info) 
     napi_value errChar3;
     napi_throw_error(env, nullptr, "Additional arguments should be undefined.");
     napi_create_string_utf8(env, "Wrong arguments. Additional arguments should be undefined.",
-                            sizeof("Wrong arguments. Additional arguments should be undefined."), &errChar3);
+      sizeof("Wrong arguments. Additional arguments should be undefined."), &errChar3);
     return  errChar3;
   }
 

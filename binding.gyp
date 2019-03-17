@@ -2,7 +2,20 @@
   "targets": [
      {
        "target_name": "<(module_name)",
-       "sources": [ "./src/callback/callback.cc", "./src/function/function.cc", "./src/class/class.cc", "./src/napi_example.cc" ]
+       "sources": [
+         "./src/callback/callback.cc",
+         "./src/function_wrap/function_wrap.cc",
+         "./src/object_wrap/object_wrap.cc",
+         "./src/object_factory/object_factory.cc",
+         "./src/passing_wrap/passing_wrap.cc",
+         "./src/napi_example.cc"
+       ],
+       "include_dirs": [
+         "<!@(node -p \"require('node-addon-api').include\")"
+       ],
+       "dependencies": [
+         "<!(node -p \"require('node-addon-api').gyp\")"
+       ]
      },
     {
       "target_name": "action_after_build",
@@ -17,6 +30,7 @@
     }
   ],
   "defines": [
-      "NAPI_VERSION=<(napi_build_version)",
-  ]
+      "NAPI_VERSION=<(napi_build_version)"
+  ],
+  "include_dirs": []
 }
