@@ -32,7 +32,7 @@
     "module_name": "napi_example",
     "module_path": "./binding/Release/napi-v{napi_build_version}",
     "package_name": "napi-v{napi_build_version}-{platform}-{arch}.tar.gz",
-    "host": "https://api.github.com/zhouzhi3859/napi_example/releases/download/",
+    "host": "https://github.com/zhouzhi3859/napi_example/releases/download/",
     "remote_path": "v{version}",
     "napi_versions": [
       1,
