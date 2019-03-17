@@ -22,5 +22,3 @@ npm run dev
 
 [node_napi]:http://nodejs.cn/api/n-api.html
 [node_gyp]:https://www.npmjs.com/package/node-gyp
-
-
