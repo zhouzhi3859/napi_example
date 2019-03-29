@@ -14,6 +14,7 @@ You can visit [app.js](./app.js) know how use it which napi_module are construct
 
 # Run this example
 You have to make sure [node_gyp] now installed in you computer.
+
 ```shell
 npm install
 npm run build
