@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label 'SWARM-NODE-NODEJS'
+    label 'SWARM-NODE-NODEJS:DOCKER'
   }
   stages {
     stage('build') {
